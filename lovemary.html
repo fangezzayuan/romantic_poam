@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Poem</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; 
+            height: 100vh;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
+        }
+
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url('https://th.bing.com/th/id/R.8481b3ca6c66ca77b3a4dac396ce07ae?rik=4ONPSjwvbdp60w&pid=ImgRaw&r=0'); /* Cloud image */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; 
+        }
+
+        .gif-background {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url('https://equity.guru/wp-content/uploads/2016/12/beating-heart.gif'); /* GIF */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .headline {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff69b4; 
+            text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8); /* Purple shadow */
+            margin: 20px 0;
+            position: relative;
+            z-index: 1; 
+        }
+
+        .poem-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 70vh; 
+            overflow-y: auto; 
+        }
+
+        .poem {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(428, 22, 78, 0.8)
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="clouds"></div>
+        <div class="gif-background"></div>
+    </div>
+    <div class="headline">أحبك  ابنتي</div>
+    <div class="poem-container">
+        <p class="poem">أنتِ لوحة فنية تتجلى في عيني،</p>
+        <p class="poem">عيناك تنبضان بسحر النجوم في السماء،</p>
+        <p class="poem">شفتاك كأزهار الربيع تفتحت لتنثر الجمال،</p>
+        <p class="poem">ساقاك الطويلتان ترقصان بسحر لا مثيل له،</p>
+        <p class="poem">ومؤخرتك الجميلة تنبعث منها ألوان الفن الخالد،</p>
+        <p class="poem">في الهواء تحلق الفراشات وتطفو القلوب، محاطة بأزهار الفراولة.</p>
+        <p class="poem">سأكون لك أباً، سأكون لك سنداً،</p>
+        <p class="poem">سأكون معشوقك ومعبودك،</p>
+        <p class="poem">سأكون طفلاً تلعبين معه،</p>
+        <p class="poem">رجلاً تبكين على كتفيه،</p>
+        <p class="poem">وزوجًا تجملين بأطفاله.</p>
+        <p class="poem">حبيبتي، أنتِ كل ما هو جميل في حياتي،</p>
+        <p class="poem">أيامي بجانبك كأحلام تحققت في الواقع،</p>
+        <p class="poem">تحبين أن أكون رجلاً يحميك ويحتضنك،</p>
+        <p class="poem">كأنك ابنتي الصغيرة التي أحبها وأحميها بكل حنان،</p>
+        <p class="poem">وبين أياديي تلعبين كأطفال الصغار وتملأين حياتي بالفرح.</p>
+        <p class="poem">أنتِ تحفة فنية لا يمكن وصف جمالها،</p>
+        <p class="poem">أغوص في عينيك وأجد عالماً من الحنان والجمال،</p>
+        <p class="poem">أكتب عنك في كل قصيدة بأبهى الألحان،</p>
+        <p class="poem">أنتِ عشقي وروحي وكل ما أحلم به وأتمنى،</p>
+        <p class="poem">فأنتِ جزء من كل حلم يداعب خيالي ويملأ حياتي بالألوان.</p>
+        <p class="poem">في حضنك أجد سلامي وسعادتي،</p>
+        <p class="poem">أنتِ الشمس التي تضيء حياتي بكل جمالها،</p>
+        <p class="poem">أنتِ تسكنين قلبي وتملأينه بالحب والدفء،</p>
+        <p class="poem">أنتِ النجمة التي تزين سمائي وتجعلها مشرقة بكل تألق،</p>
+        <p class="poem">وأنتِ تنثرين السعادة من حولك كنسيم الصباح العليل.</p>
+        <p class="poem">أحبك بكل لغات العشق والعاطفة،</p>
+        <p class="poem">أنتِ الأميرة التي أفتخر بحبها وأعتني بها،</p>
+        <p class="poem">أرسم لك أجمل اللحظات وأبني مستقبلي بجانبك،</p>
+        <p class="poem">فأنتِ الفن والحب والحياة التي لا أستطيع الاستغناء عنها،</p>
+        <p class="poem">أنتِ روحي وحياتي والقلب الذي ينبض بكل حبي وولهي.</p>
+    </div>
+</body>
+</html>
