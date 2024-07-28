@@ -28,11 +28,12 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background-image: url('https://th.bing.com/th/id/R.8481b3ca6c66ca77b3a4dac396ce07ae?rik=4ONPSjwvbdp60w&pid=ImgRaw&r=0');
+            background-image: url('https://wallpapercave.com/wp/wp9423396.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1; 
-        }
+            animation: moveClouds 60s linear infinite;
+       }
 
         .gif-background {
             position: absolute;
@@ -40,7 +41,7 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background-image: url('https://equity.guru/wp-content/uploads/2016/12/beating-heart.gif'); /* GIF */
+            background-image: url('https://th.bing.com/th/id/R.86a62c68caa32a278a6c78bf309ed46c?rik=yGtnffgFGm8jkA&pid=ImgRaw&r=0'); 
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -50,37 +51,61 @@
             text-align: center;
             font-size: 2.5rem;
             font-weight: bold;
-            color: #ff69b4; 
-            text-shadow: 2px 2px 4px rgba(128, 0, 128, 0.8);
+            color: #ff39E9; 
+            text-shadow: 1px 1px 2px rgba(41, 622, 728, 0.9);
             margin: 20px 0;
             position: relative;
-            z-index: 1; 
+            z-index: 1;
+            cursor: pointer; 
         }
 
         .poem-container {
             width: 80%;
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2); 
+            padding: 25px;
+            background: rgba(255, 255, 255, 0); 
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
             text-align: center;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            height: 70vh; 
-            overflow-y: auto; 
+            height: 70vh;
+            overflow-y: scroll;
+            scrollbar-width: none; 
+            -ms-overflow-style: none; 
+        }
+
+        .poem-container::-webkit-scrollbar {
+            display: none;
         }
 
         .poem {
-            font-size: 1.2rem;
-            color: #333;
-            line-height: 1.6;
+            font-size: 1.4rem;
             color: white;
-            text-shadow: 1px 1px 2px rgba(428, 22, 78, 0.8)
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(255, 20, 147, 0.8); 
+            color : pink;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
         }
+
+        .poem.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+@keyframes moveClouds {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -88,8 +113,8 @@
         <div class="clouds"></div>
         <div class="gif-background"></div>
     </div>
-    <div class="headline">أحبك  ابنتي</div>
-    <div class="poem-container">
+    <div class="headline" onclick="startPoemReveal()">أحبك طفلتي</div>
+    <div class="poem-container" id="poemContainer">
         <p class="poem">أنتِ لوحة فنية تتجلى في عيني،</p>
         <p class="poem">عيناك تنبضان بسحر النجوم في السماء،</p>
         <p class="poem">شفتاك كأزهار الربيع تفتحت لتنثر الجمال،</p>
@@ -121,5 +146,17 @@
         <p class="poem">فأنتِ الفن والحب والحياة التي لا أستطيع الاستغناء عنها،</p>
         <p class="poem">أنتِ روحي وحياتي والقلب الذي ينبض بكل حبي وولهي.</p>
     </div>
+    <script>
+        function startPoemReveal() {
+            const lines = document.querySelectorAll('.poem');
+            const container = document.getElementById('poemContainer');
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.add('revealed');
+                    line.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, index * 3000); // Delay each line by 3 seconds
+            });
+        }
+    </script>
 </body>
 </html>
